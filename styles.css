@@ -66,14 +66,52 @@ body {
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   font-size: 1rem;
-  /* temporary */
+}
+.card {
+  background-color: aqua;
+}
+
+.card-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(173, 165, 165);
+  flex-direction: column;
+  max-width: 326px;
+  border-radius: 15px;
+  margin: 0 auto;
 }
 
 .upper-container-profile {
-  background-image: url(./images/bg-pattern-card.svg);
-  background-repeat: no-repeat;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+img .img-background-upper-container-profile {
+  border-radius: 15px 15px 0 0;
+}
+.image-container {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 5.6em;
+  width: 5.6em;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image-profile {
+  border-radius: 50%;
+  padding: 0.22em;
+}
+.lower-container-profile {
+  background-color: var(--background-color-lower-container);
+  padding-top: 4em;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.stat-profile-card {
+  display: flex;
 }
