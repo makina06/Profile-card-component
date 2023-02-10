@@ -1,3 +1,15 @@
+:root {
+  /* color */
+  --text-color: #6b7082;
+  --background-color-lower-container: #fff;
+  /* font */
+  --ff-base: "Kumbh Sans", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* CSS reset */
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -13,6 +25,7 @@
 html,
 body {
   height: 100%;
+  font-size: 18px;
 }
 body {
   line-height: 1.5;
@@ -44,4 +57,23 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/*  General Styling profile-card Mobile First */
+
+body {
+  color: var(--text-color);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  /* temporary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(173, 165, 165);
+}
+
+.upper-container-profile {
+  background-image: url(./images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
 }
