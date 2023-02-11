@@ -1,11 +1,15 @@
 :root {
   /* color */
-  --text-color: #6b7082;
+  --text-color-1: #6b7082;
+  --text-color-2: #2e3349;
   --background-color-lower-container: #fff;
+  --delimitation: #e8e9ec;
+  --background: hsl(185, 75%, 39%);
   /* font */
   --ff-base: "Kumbh Sans", sans-serif;
   --fw-regular: 400;
   --fw-bold: 700;
+  --fs-stat-label: 10px;
 }
 
 /* CSS reset */
@@ -66,24 +70,25 @@ body {
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   font-size: 1rem;
-}
-.card {
-  background-color: aqua;
+  background-color: var(--background);
+  display: grid;
+  place-items: center;
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 35vh, left 50vw top 40vh;
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
   max-width: 326px;
-  border-radius: 15px;
-  margin: 0 auto;
 }
 
 .upper-container-profile {
-  border-radius: 15px 15px 0 0;
   position: relative;
 }
-img .img-background-upper-container-profile {
+.img-background-upper-container-profile {
   border-radius: 15px 15px 0 0;
 }
 .image-container {
@@ -104,14 +109,53 @@ img .img-background-upper-container-profile {
   background-color: var(--background-color-lower-container);
   padding-top: 4em;
   text-align: center;
+  border-radius: 0 0 15px 15px;
 }
 
 .profile {
   display: flex;
   justify-content: center;
   gap: 1em;
+  margin-bottom: 1em;
+}
+.name {
+  font-weight: var(--fw-bold);
+  color: var(--text-color-2);
+}
+.age {
+  color: var(--text-color-1);
+}
+.location {
+  font-size: 0.77rem;
+  margin-bottom: 1em;
 }
 
+.delimitation {
+  margin-bottom: 1em;
+  background-color: var(--delimitation);
+  height: 1px;
+  border: none;
+}
 .stat-profile-card {
   display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+.stat-value {
+  font-weight: var(--fw-bold);
+  color: var(--text-color-2);
+}
+
+.stat-label {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-stat-label);
+  color: var(--text-color-1);
+}
+/* general styling desktop */
+
+@media only screen and (min-width: 375px) {
+  .card-container {
+    max-width: 350px;
+  }
 }
